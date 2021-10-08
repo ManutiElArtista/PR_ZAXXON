@@ -5,7 +5,8 @@ using UnityEngine;
 public class MovimientoNave : MonoBehaviour
 {
     Vector3 initPos = new Vector3(0f, 2.4f, 0f);
-    [SerializeField] float speed = 0f;
+
+    [SerializeField] float speed = 3f;
 
     // Start is called before the first frame update
     void Start()

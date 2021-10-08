@@ -9,8 +9,8 @@ InputManager:
     m_Name: Rotation
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: q
-    positiveButton: e
+    negativeButton: e
+    positiveButton: q
     altNegativeButton: left
     altPositiveButton: right
     gravity: 3

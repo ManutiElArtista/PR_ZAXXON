@@ -9,10 +9,10 @@ public class Shoot : MonoBehaviour
 
     public GameObject bullet; // Para instanciar un objeto en el.
 
-    public float shootForce = 1500f; // Va a ser la potencia de la bala.
-    public float shootRate = 0.5f; // Cada cuanto se puede disparar.
+    // public float shootForce = 1500f; // Va a ser la potencia de la bala.
+    // public float shootRate = 0.5f; // Cada cuanto se puede disparar.
 
-    private float shootRateTime = 0; // Contador para ver si puede disparar.
+    // private float shootRateTime = 0; // Contador para ver si puede disparar.
 
     // Update is called once per frame
     void Update()
@@ -23,7 +23,6 @@ public class Shoot : MonoBehaviour
 
             newBullet = Instantiate(bullet, spawnPoint.position, spawnPoint.rotation); // Instanciamos la bala en la posicion del spawnPoint con la rotacion y posicion que tenga 
                                                                                        // diciendo que el objeto puesto en la variable "bullet" es el que saldra de ella.
-
         }
     }
 }
