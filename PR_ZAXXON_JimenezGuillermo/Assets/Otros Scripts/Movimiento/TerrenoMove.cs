@@ -2,21 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Velocidad : MonoBehaviour
+public class TerrenoMove : MonoBehaviour
 {
-    public float speed;
-    public float speedObjects;
+
+    Velocidad velocidad;
 
     // Start is called before the first frame update
     void Start()
     {
-        speed = 10f;
-        speedObjects = 10f;
+        velocidad = GameObject.Find("InitGame").GetComponent<Velocidad>(); 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        float speed = velocidad.speed;
     }
 }

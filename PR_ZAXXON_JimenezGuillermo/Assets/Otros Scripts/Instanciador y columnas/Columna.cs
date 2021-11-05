@@ -19,7 +19,7 @@ public class Columna : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        speed = velocidad.speed; // Le damos el valor a la variable que hemos nombrado al principio la variable llamada speed.
+        speed = velocidad.speedObjects; // Le damos el valor a la variable que hemos nombrado al principio la variable llamada speed.
 
         ColumnaMoove(); // Hacemos que se mueva.
     }

@@ -20,12 +20,12 @@ public class MovimientoYRapidez : MonoBehaviour
     {
         objetoVariable = GameObject.Find("Variable");
         velocidad = objetoVariable.GetComponent<Velocidad>();
+        speed = velocidad.speed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        speed = velocidad.speed;
         Moove();
     }
 

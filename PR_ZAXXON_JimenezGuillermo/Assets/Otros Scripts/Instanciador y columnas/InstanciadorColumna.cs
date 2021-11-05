@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InstanciadorColumna : MonoBehaviour
 {
+    [SerializeField] GameObject vidasGameObject;
+    // public int cont;
 
     float intervalo;
 
@@ -15,15 +17,18 @@ public class InstanciadorColumna : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        intervalo = 0.3f;
 
+        vidasGameObject = GameObject.Find("Player");
+        // cont = Vidas.contLife; // Para coger el valor de una variable estatica.
+
+        intervalo = 1f; // Velocidad a la que salen los obstaculos.
         StartCoroutine("CrearColumna");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        pararCorrutina();
     }
 
     IEnumerator CrearColumna()
@@ -37,16 +42,27 @@ public class InstanciadorColumna : MonoBehaviour
             Vector3 newPosY = new Vector3(randomX, randomY, instantiatePosition.position.z); // Le decimos que el random Y y el randomX sea una nueva posicion.
 
             int numAl = Random.Range(0, obstaculos.Length); // Creamos una variable que diga que sea un numero aleatorio entre el valor 0 (1) y el valor maximo va a ser el numero maximo de objetos que le hayamos instanciado.
-
+            
             if (obstaculos[numAl].tag == "Piramide") // Le decimos que si el tag del gameObject sea Piramide, que salga aleatorio en posicion X e Y.
             {
                 Instantiate(obstaculos[numAl], newPosY, Quaternion.identity);
             }
+
             else
             {
                 Instantiate(obstaculos[numAl], newPos, Quaternion.identity); // Instanciamos al objeto que tenga el script el objeto aleatorio que haya salido anteriormente, con la posicion creada anteriormente y misma rotacion.
             }
+
             yield return new WaitForSeconds(intervalo);
+        }
+    }
+
+    public void pararCorrutina()
+    {
+        if (Vidas.contLife == 0)
+        {
+            print("Parar corrutina");
+            StopCoroutine("CrearColumna");
         }
     }
 }

@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Velocidad : MonoBehaviour
+public class InstanciadorTerrenos : MonoBehaviour
 {
-    public float speed;
-    public float speedObjects;
+
+    [SerializeField] GameObject terrenoPrefab;
 
     // Start is called before the first frame update
     void Start()
     {
-        speed = 10f;
-        speedObjects = 10f;
+        Instantiate(terrenoPrefab);
     }
 
     // Update is called once per frame
