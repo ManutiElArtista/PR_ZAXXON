@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8058075138506381513}
   m_Layer: 0
   m_Name: Roca
-  m_TagString: Piramide
+  m_TagString: Nube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

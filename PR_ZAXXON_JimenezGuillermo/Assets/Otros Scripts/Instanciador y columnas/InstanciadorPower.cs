@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InstanciadorColumna : MonoBehaviour
+public class InstanciadorPower : MonoBehaviour
 {
     [SerializeField] GameObject vidasGameObject;
     // public int cont;

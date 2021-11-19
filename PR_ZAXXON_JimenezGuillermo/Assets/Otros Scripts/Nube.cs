@@ -6,13 +6,13 @@ public class Nube : MonoBehaviour
 {
     
     [SerializeField] GameObject objetoPlayer;
-    MovimientoYRapidez velocidad;
+    Velocidad velocidad;
 
     // Start is called before the first frame update
     void Start()
     {
-        objetoPlayer = GameObject.Find("Player");
-        velocidad = objetoPlayer.GetComponent<MovimientoYRapidez>();
+        objetoPlayer = GameObject.Find("Variable");
+        velocidad = objetoPlayer.GetComponent<Velocidad>();
     }
 
     // Update is called once per frame

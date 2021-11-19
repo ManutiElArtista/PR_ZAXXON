@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Vidas : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class Vidas : MonoBehaviour
         objetoVariable = GameObject.Find("Variable");
         velocidad = objetoVariable.GetComponent<Velocidad>();
 
-        contLife = 3;
+        contLife = 2; 
         livesImage.sprite = spriteArray[contLife];
     }
 
@@ -32,17 +33,26 @@ public class Vidas : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Destructor" && contLife > 1)
+        if(other.gameObject.tag == "Destructor" && contLife >= 1)
         {
             print("te has chocado");
             contLife--;
             livesImage.sprite = spriteArray[contLife];
         }
 
-        else
+        if(other.gameObject.tag == "Vida" && contLife <= 1)
         {
+            contLife++;
+            livesImage.sprite = spriteArray[contLife];
+        }
+
+        else if(contLife == 0)
+        {
+            GameObject.Find("InstanciadorColumnas").GetComponent<InstanciadorColumna>().SendMessage("PararCorrutina"); // Asi se hace para coger el metodo de un script.
+            GameObject.Find("Player").GetComponent<Puntuacion>().SendMessage("ParaNumeros");
             velocidad.speedObjects = 0;
             velocidad.speed = 0;
+            SceneManager.LoadScene(3);
             print("Game Over");
         }
     }

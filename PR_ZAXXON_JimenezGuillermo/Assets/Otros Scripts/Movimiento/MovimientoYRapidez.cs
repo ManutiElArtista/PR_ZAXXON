@@ -13,14 +13,12 @@ public class MovimientoYRapidez : MonoBehaviour
 
     [SerializeField] GameObject objetoVariable;
     public Velocidad velocidad;
-    public float speed;
 
     // Start is called before the first frame update
     void Start()
     {
         objetoVariable = GameObject.Find("Variable");
         velocidad = objetoVariable.GetComponent<Velocidad>();
-        speed = velocidad.speed;
     }
 
     // Update is called once per frame
@@ -42,16 +40,16 @@ public class MovimientoYRapidez : MonoBehaviour
         despX = Input.GetAxis("Horizontal");
         desplR = Input.GetAxis("Rotation");
 
-        transform.Rotate(0f, 0f, desplR * Time.deltaTime * speed);
+        transform.Rotate(0f, 0f, desplR * Time.deltaTime * velocidad.speed);
 
         if ((posX < limitX || despX < 0f) && (posX > -limitX || despX > 0f))
         {
-            transform.Translate(Vector3.right * despX * Time.deltaTime * speed, Space.World);
+            transform.Translate(Vector3.right * despX * Time.deltaTime * velocidad.speed, Space.World);
         }     
 
         if((posY > 0.05f || despY > 0f) && (posY < 5f || despY < 0f)) // Condicion de que si la posicion es mayor que la de abajo (Caso vertical) o lo estoy desplazando hacia arriba, que lo mueva YYYYY si 
         {
-            transform.Translate(Vector3.up * despY * Time.deltaTime * speed, Space.World); // El Space.World se utiliza para que a la hora de rotar, rote de manera normal y se mueva hacia arriba y no coja los valores del transform.
+            transform.Translate(Vector3.up * despY * Time.deltaTime * velocidad.speed, Space.World); // El Space.World se utiliza para que a la hora de rotar, rote de manera normal y se mueva hacia arriba y no coja los valores del transform.
         }
     }
 

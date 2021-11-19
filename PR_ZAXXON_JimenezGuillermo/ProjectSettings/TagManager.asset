@@ -4,9 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Piramide
   - Destructor
   - Nube
+  - Bala
+  - Vida
   layers:
   - Default
   - TransparentFX
