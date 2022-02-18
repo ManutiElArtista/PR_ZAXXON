@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 8951569043142021672}
   - component: {fileID: 7143748474084921197}
   - component: {fileID: 8998885903464167147}
-  - component: {fileID: -8583225550452354101}
   - component: {fileID: -6533899290020067794}
   - component: {fileID: 7788541700191676129}
   - component: {fileID: 8058075138506381513}
+  - component: {fileID: 3662202978198738337}
+  - component: {fileID: 5463180402763759218}
   m_Layer: 0
   m_Name: Roca
   m_TagString: Nube
@@ -30,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3664514097603863240}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 2.8, z: 27.88071}
+  m_LocalPosition: {x: 0, y: 0.03, z: 0}
   m_LocalScale: {x: 5.5331507, y: 5.5331507, z: 5.5331507}
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 749fe68988b020d4f99d0688cafc3aa7, type: 2}
+  - {fileID: 2100000, guid: eff9bd1fc3971e7499e63b512110dfef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,20 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-8583225550452354101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3664514097603863240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab5c8b75d3e530c44bfadfb76e51d7aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objetoVariable: {fileID: 0}
-  velocidad: {fileID: 0}
 --- !u!114 &-6533899290020067794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,3 +128,36 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3662202978198738337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3664514097603863240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a27e157e1a2934389d123483da4d30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetoVariable: {fileID: 0}
+  velocidad: {fileID: 0}
+--- !u!95 &5463180402763759218
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3664514097603863240}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 41a0d3f73f7bca84f8f6b5f942ad7efa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

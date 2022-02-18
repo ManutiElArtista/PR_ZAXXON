@@ -6,7 +6,7 @@ public class CameraMoove : MonoBehaviour
 {
     [SerializeField] Transform playerPosition;
     //Variables necesarias para la opción de suavizado
-    [SerializeField] float smoothVelocity = 1f;
+    [SerializeField] float smoothVelocity = 0.05f;
     [SerializeField] Vector3 camaraVelocity = Vector3.zero;
 
     // float positY = playerPosition.transform.position.y;

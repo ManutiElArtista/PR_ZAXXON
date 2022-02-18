@@ -16,7 +16,6 @@ public class InstanciadorColumna : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         vidasGameObject = GameObject.Find("Player");
         // cont = Vidas.contLife; // Para coger el valor de una variable estatica.
 
@@ -37,7 +36,7 @@ public class InstanciadorColumna : MonoBehaviour
             float randomX = Random.Range(-14f, 14f); // Le damos un valor aleatorio para que salga entre dos posiciones, minima y maxima.
             float randomY = Random.Range(0.05f, 5f); // Le damos un valor aleatorio para que salga entre dos posiciones, minima y maxima.
 
-            Vector3 newPos = new Vector3(randomX, instantiatePosition.position.y, instantiatePosition.position.z); // Le decimos que random es un nuevo vector 3 que es el valo
+            Vector3 newPos = new Vector3(randomX, 2, instantiatePosition.position.z); // Le decimos que random es un nuevo vector 3 que es el valo
             Vector3 newPosY = new Vector3(randomX, randomY, instantiatePosition.position.z); // Le decimos que el random Y y el randomX sea una nueva posicion.
 
             int numAl = Random.Range(0, obstaculos.Length); // Creamos una variable que diga que sea un numero aleatorio entre el valor 0 (1) y el valor maximo va a ser el numero maximo de objetos que le hayamos instanciado.
@@ -58,7 +57,6 @@ public class InstanciadorColumna : MonoBehaviour
 
     public void PararCorrutina()
     {
-        print("He parado");
         StopCoroutine("CrearColumna");
     }
 

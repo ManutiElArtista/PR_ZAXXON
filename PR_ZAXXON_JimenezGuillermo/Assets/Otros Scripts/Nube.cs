@@ -18,7 +18,6 @@ public class Nube : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     void OnTriggerEnter(Collider other) // Para que cuando el jugador se meta dentro de la nube se reduzca su velocidad.
